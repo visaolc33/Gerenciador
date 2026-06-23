@@ -42,30 +42,15 @@ def adicionar_tarefa(titulo, prioridade="media"):
 
 
 def listar_tarefas():
-        if len(tarefas) == 0:
-            print("Não ha tarefas cadastradas")
-            return
-        else: 
-            for index, itens in enumerate(tarefas, start=1):
-                if itens['concluida'] == True :
-                    status = "[X]"
-                else:
-                    status = "[]"
-                print(f"{index}. {status} {itens['titulo' ]} (prioridade: {itens[ 'prioridade' ]})")
-"""
-    Exibe todas as tarefas cadastradas na lista `tarefas`.
+    if not tarefas:
+        print("Não ha tarefas cadastradas")
+        return
+        
+    for index, tarefa in enumerate(tarefas, start=1):
+        status = "[X]" if tarefa["concluida"] else " "
+        print(f"{index}. {status} {tarefa['titulo']} (prioridade: {tarefa['prioridade']})")
 
-    Regras:
-        - Se a lista estiver vazia, exiba uma mensagem avisando que
-          não há tarefas cadastradas e pare a função (return).
-        - Caso contrário, para cada tarefa, exiba o número dela na lista
-          (começando em 1), se está concluída ou não, o título e a
-          prioridade. Dica: use enumerate(tarefas, start=1).
 
-    Sugestão de formato de saída para cada linha:
-        1. [ ] Estudar Python (prioridade: alta)
-        2. [X] Lavar a louça (prioridade: baixa)
-    """
     # TODO (Aula 1): trate o caso de lista vazia
     # TODO (Aula 1): percorra a lista de tarefas e exiba cada uma formatada
 
