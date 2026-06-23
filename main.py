@@ -31,29 +31,47 @@ tarefas = []
 # ===== AULA 1 — Fundação do sistema =====
 # =====================================================================
 
-def adicionar_tarefa(titulo, prioridade="media"):
-    tarefa = {'titulo':titulo,'concluida':False, 'prioridade':prioridade}
+def adicionar_tarefa(titulo, prioridade="mediaa"):
+    tarefa = {'titulo'=:titulo,'concluida'=False, 'prioridade' =prioridade}
     tarefas.append(tarefa)
-    print(f"Tarefa{titulo} adicionada")
- 
-   
+    print (f"tarefa(titulo) adicionada")
+    """
+    Cria uma nova tarefa e adiciona à lista `tarefas`.
+
+    A tarefa deve ser um dicionário com as chaves:
+        - "titulo": o texto recebido no parâmetro `titulo`
+        - "concluida": deve começar como False
+        - "prioridade": o texto recebido no parâmetro `prioridade`
+
+    Depois de adicionar, exiba uma mensagem confirmando que a tarefa
+    foi criada (pode usar print).
+    """
+
+    # TODO (Aula 1): crie o dicionário da tarefa
+    # TODO (Aula 1): adicione o dicionário à lista `tarefas`
+    # TODO (Aula 1): exiba uma mensagem de confirmação
     # TODO (Aula 3): depois de implementar salvar_tarefas(), chame-a aqui
     pass
 
 
 def listar_tarefas():
-    if not tarefas:
-        print("Não ha tarefas cadastradas")
-        return
-        
-    for index, tarefa in enumerate(tarefas, start=1):
-        status = "[X]" if tarefa["concluida"] else " "
-        print(f"{index}. {status} {tarefa['titulo']} (prioridade: {tarefa['prioridade']})")
+    """
+    Exibe todas as tarefas cadastradas na lista `tarefas`.
 
+    Regras:
+        - Se a lista estiver vazia, exiba uma mensagem avisando que
+          não há tarefas cadastradas e pare a função (return).
+        - Caso contrário, para cada tarefa, exiba o número dela na lista
+          (começando em 1), se está concluída ou não, o título e a
+          prioridade. Dica: use enumerate(tarefas, start=1).
 
+    Sugestão de formato de saída para cada linha:
+        1. [ ] Estudar Python (prioridade: alta)
+        2. [X] Lavar a louça (prioridade: baixa)
+    """
     # TODO (Aula 1): trate o caso de lista vazia
     # TODO (Aula 1): percorra a lista de tarefas e exiba cada uma formatada
-
+    pass
 
 
 # =====================================================================
